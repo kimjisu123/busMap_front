@@ -4,7 +4,7 @@ import {
 
 export const callGetTest = () =>{
 
-    const requestURL = `http://localhost:8080/test`;
+    const requestURL = process.env.REACT_APP_API_URL + '/test'
     return async (dispatch, getState) =>{
         const result = await fetch(requestURL, {
             method: 'GET',
